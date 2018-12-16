@@ -2,6 +2,7 @@ package com.example.administrador.calculadora;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.VolumeShaper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.TextureView;
@@ -12,8 +13,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     //Variables que declaramos en MainActivity:
-        //El resultado de la operacion, que lo pasaremos a la SecondActivity
-        String MESSAGE_KEY = "message";
+    String MESSAGE_KEY = "message";     //lo que pasamos a la otra activity
+    String MESSAGE_KEY_2;               //lo que recibimos de la otra activity
+    public String OPERATION_ARRAY;             //array de los valores que introducimos a la operacion
 
 
     @Override
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Para controlar o escuchar los inputs, creamos los objetos View y los asociamos a los objetos del Layout
-        Button b1 = (Button)findViewById(R.id.b1);
+        /*Button b1 = (Button)findViewById(R.id.b1);
         Button b2 = (Button)findViewById(R.id.b2);
         Button b3 = (Button)findViewById(R.id.b3);
         Button b4 = (Button)findViewById(R.id.b4);
@@ -37,46 +39,253 @@ public class MainActivity extends AppCompatActivity {
         Button bdiv = (Button)findViewById(R.id.bdiv);
         Button benter = (Button)findViewById(R.id.benter);
         Button bce = (Button)findViewById(R.id.bce);
+        TextView operacion = (TextView)findViewById(R.id.operacion);*/
+    }
+
+
+    //CREAMOS TODAS LAS FUNCIONES PARA LOS BOTONES DE LA CALCULADORA
+
+    //MENOS EL ENTER Y EL CE, TODAS CONCATENARAN LO QUE SALE DE SU BOTON CON EL OPERATION_ARRAY
+
+    public void one(View v){
+        Button b1 = (Button)findViewById(R.id.b1);
         TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")         //Si es el primer valorque se añade al array
+            {
+            OPERATION_ARRAY="1";
+            }
+        else {                                                      //Si no, hara la concatenacion
+            String one = "1";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void two(View v){
+        Button b2 = (Button)findViewById(R.id.b2);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="2";
+        }
+        else {
+            String one = "2";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void three(View v){
+        Button b3 = (Button)findViewById(R.id.b3);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="3";
+        }
+        else {
+            String one = "3";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void four(View v){
+        Button b4 = (Button)findViewById(R.id.b4);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="4";
+        }
+        else {
+            String one = "4";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void five(View v){
+        Button b5 = (Button)findViewById(R.id.b5);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="5";
+        }
+        else {
+            String one = "5";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void six(View v){
+        Button b6 = (Button)findViewById(R.id.b6);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="6";
+        }
+        else {
+            String one = "6";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void seven(View v){
+        Button b7 = (Button)findViewById(R.id.b7);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="7";
+        }
+        else {
+            String one = "7";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void eight(View v){
+        Button b8 = (Button)findViewById(R.id.b8);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="8";
+        }
+        else {
+            String one = "8";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void nine(View v){
+        Button b9 = (Button)findViewById(R.id.b9);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="9";
+        }
+        else {
+            String one = "9";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void cero(View v){
+        Button b0 = (Button)findViewById(R.id.b0);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="0";
+        }
+        else {
+            String one = "0";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void suma(View v){
+        Button bsum = (Button)findViewById(R.id.bsum);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="+";
+        }
+        else {
+            String one = "+";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void resta(View v){
+        Button bres = (Button)findViewById(R.id.bres);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="-";
+        }
+        else {
+            String one = "-";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void multiplicacion(View v){
+        Button bmul = (Button)findViewById(R.id.bmul);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="*";
+        }
+        else {
+            String one = "*";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
+    }
+
+
+    public void division(View v){
+        Button bdiv = (Button)findViewById(R.id.bdiv);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        {
+            OPERATION_ARRAY="/";
+        }
+        else {
+            String one = "/";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+        }
+        operacion.setText(OPERATION_ARRAY);
     }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    //Haremos un Intent para pasar a la ActivitySecond el resultado de la operacion:
-    //(Debido a la division, "resultado" lo declaramos como float)
-    public void lanzarSecondActivity(View v, float resultado){
-        Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra("resultado",resultado);
-        startActivity(intent);
+    //AL DARLE AL CE, HAY QUE BOORAR EL OPERATION_ARRAY
+    public void ce(View v){
+        Button bce = (Button)findViewById(R.id.bce);
+        TextView operacion = (TextView)findViewById(R.id.operacion);
+        OPERATION_ARRAY=null;
+        operacion.setText(OPERATION_ARRAY);
     }
 
 
 
+    //AHORA, AL DARLE AL ENTER, PROCESAREMOS LA OPERACION
+    //Y, HAREMOS EL INTENT PARA PASARLE AL SecondActivity EL RESULTADO
+    public void enter(){
+        Button benter = (Button)findViewById(R.id.benter);
+        //PROCESAMOS LA OPERRACION
 
 
 
 
+
+        //HACEMOS EL INTENT
+        Intent i = new Intent(this,SecondActivity.class);
+        String message;
+        i.putExtra(MESSAGE_KEY,message);
+        startActivity(i);
+    }
 
 
 
 }
-
-
-
-
-
-
-
-

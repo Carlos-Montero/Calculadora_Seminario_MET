@@ -41,28 +41,32 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="7" />
+            android:text="7"
+            android:onClick="seven"/>
 
         <Button
             android:id="@+id/b8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="8" />
+            android:text="8"
+            android:onClick="eight"/>
 
         <Button
             android:id="@+id/b9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="9" />
+            android:text="9"
+            android:onClick="nine"/>
 
         <Button
             android:id="@+id/bdiv"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="/" />
+            android:text="/"
+            android:onClick="division"/>
 
     </LinearLayout>
 
@@ -79,28 +83,32 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="4" />
+            android:text="4"
+            android:onClick="four"/>
 
         <Button
             android:id="@+id/b5"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="5" />
+            android:text="5"
+            android:onClick="five"/>
 
         <Button
             android:id="@+id/b6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="6" />
+            android:text="6"
+            android:onClick="six"/>
 
         <Button
             android:id="@+id/bmul"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="*" />
+            android:text="*"
+            android:onClick="multiplicacion"/>
 
 
     </LinearLayout>
@@ -117,28 +125,32 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="1" />
+            android:text="1"
+            android:onClick="one"/>
 
         <Button
             android:id="@+id/b2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="2"
+            android:onClick="two"/>
 
         <Button
             android:id="@+id/b3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="3"
+            android:onClick="three"/>
 
          <Button
              android:id="@+id/bres"
              android:layout_width="wrap_content"
              android:layout_height="match_parent"
              android:layout_weight="1"
-             android:text="-" />
+             android:text="-"
+             android:onClick="resta"/>
 
         </LinearLayout>
 
@@ -155,27 +167,25 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:text="0" />
+            android:text="0"
+            android:onClick="cero"/>
 
         <Button
             android:id="@+id/benter"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="3.4"
-            android:text="Enter" />
+            android:text="Enter"
+            android:onClick="enter"/>
 
-        <!--<Button-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="1"-->
-            <!--android:text="x" />-->
 
         <Button
             android:id="@+id/bsum"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:text="+" />
+            android:text="+"
+            android:onClick="suma"/>
 
 
     </LinearLayout>
@@ -192,7 +202,8 @@
             android:id="@+id/bce"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="CE" />
+            android:text="CE"
+            android:onClick="ce"/>
 
     </LinearLayout>
 
