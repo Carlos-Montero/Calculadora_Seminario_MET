@@ -279,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
         //PROCESAMOS LA OPERRACION
         int cont = 0;
         float resultado = 0;
-        resultado=Float.parseFloat(OPERATION_ARRAY.get(cont);
+        resultado=Float.parseFloat(OPERATION_ARRAY.get(cont));
         cont++;
         while(cont<OPERATION_ARRAY.size()){
             if(OPERATION_ARRAY.get(cont)=="+"){
