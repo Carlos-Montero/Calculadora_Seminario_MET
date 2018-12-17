@@ -283,16 +283,16 @@ public class MainActivity extends AppCompatActivity {
         cont++;
         while(cont<OPERATION_ARRAY.size()){
             if(OPERATION_ARRAY.get(cont)=="+"){
-                resultado=resultado+Float.parseFloat(OPERATION_ARRAY.get(cont+1);
+                resultado=resultado+Float.parseFloat(OPERATION_ARRAY.get(cont+1));
             }
             if(OPERATION_ARRAY.get(cont)=="-"){
-                resultado=resultado-Float.parseFloat(OPERATION_ARRAY.get(cont+1);
+                resultado=resultado-Float.parseFloat(OPERATION_ARRAY.get(cont+1));
             }
             if(OPERATION_ARRAY.get(cont)=="*"){
-                resultado=resultado*Float.parseFloat(OPERATION_ARRAY.get(cont+1);
+                resultado=resultado*Float.parseFloat(OPERATION_ARRAY.get(cont+1));
             }
             if(OPERATION_ARRAY.get(cont)=="/"){
-                resultado=resultado/Float.parseFloat(OPERATION_ARRAY.get(cont+1);
+                resultado=resultado/Float.parseFloat(OPERATION_ARRAY.get(cont+1));
             }
             cont=cont+2;
         }
