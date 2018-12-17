@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
     //Variables que declaramos en MainActivity:
     String MESSAGE_KEY = "message";     //lo que pasamos a la otra activity
     String MESSAGE_KEY_2;               //lo que recibimos de la otra activity
-    public String OPERATION_ARRAY;             //array de los valores que introducimos a la operacion
-
+    public String[] OPERATION_ARRAY;             //array de los valores que introducimos a la operacion
+    int i=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,178 +50,180 @@ public class MainActivity extends AppCompatActivity {
     public void one(View v){
         Button b1 = (Button)findViewById(R.id.b1);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")         //Si es el primer valorque se añade al array
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")         //Si es el primer valorque se añade al array
             {
-            OPERATION_ARRAY="1";
+            OPERATION_ARRAY[i]="1";
             }
         else {                                                      //Si no, hara la concatenacion
             String num = "1";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
             }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void two(View v){
         Button b2 = (Button)findViewById(R.id.b2);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="2";
+            OPERATION_ARRAY[i]="2";
         }
         else {
             String num = "2";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void three(View v){
         Button b3 = (Button)findViewById(R.id.b3);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="3";
+            OPERATION_ARRAY[i]="3";
         }
         else {
             String num = "3";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void four(View v){
         Button b4 = (Button)findViewById(R.id.b4);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="4";
+            OPERATION_ARRAY[i]="4";
         }
         else {
             String num = "4";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void five(View v){
         Button b5 = (Button)findViewById(R.id.b5);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="5";
+            OPERATION_ARRAY[i]="5";
         }
         else {
             String num = "5";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void six(View v){
         Button b6 = (Button)findViewById(R.id.b6);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="6";
+            OPERATION_ARRAY[i]="6";
         }
         else {
             String num = "6";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void seven(View v){
         Button b7 = (Button)findViewById(R.id.b7);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="7";
+            OPERATION_ARRAY[i]="7";
         }
         else {
             String num = "7";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void eight(View v){
         Button b8 = (Button)findViewById(R.id.b8);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="8";
+            OPERATION_ARRAY[i]="8";
         }
         else {
             String num = "8";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void nine(View v){
         Button b9 = (Button)findViewById(R.id.b9);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="9";
+            OPERATION_ARRAY[i]="9";
         }
         else {
             String num = "9";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void cero(View v){
         Button b0 = (Button)findViewById(R.id.b0);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="0";
+            OPERATION_ARRAY[i]="0";
         }
         else {
             String num = "0";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText(OPERATION_ARRAY[i]);
     }
 
 
     public void suma(View v){
         Button bsum = (Button)findViewById(R.id.bsum);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        i=i+1;
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="+";
+            OPERATION_ARRAY[i]="+";
         }
         else {
             String operador = "+";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(operador);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(operador);
         }
         operacion.setText("");
+        i=i+1;
     }
 
 
     public void resta(View v){
         Button bres = (Button)findViewById(R.id.bres);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="-";
+            OPERATION_ARRAY[i]="-";
         }
         else {
             String operador = "-";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(operador);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(operador);
         }
         operacion.setText("");
     }
@@ -230,13 +232,13 @@ public class MainActivity extends AppCompatActivity {
     public void multiplicacion(View v){
         Button bmul = (Button)findViewById(R.id.bmul);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="*";
+            OPERATION_ARRAY[i]="*";
         }
         else {
             String operador = "*";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(operador);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(operador);
         }
         operacion.setText("");
     }
@@ -245,13 +247,13 @@ public class MainActivity extends AppCompatActivity {
     public void division(View v){
         Button bdiv = (Button)findViewById(R.id.bdiv);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY == null || OPERATION_ARRAY== "")
+        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
-            OPERATION_ARRAY="/";
+            OPERATION_ARRAY[i]="/";
         }
         else {
             String operador = "/";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(operador);
+            OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(operador);
         }
         operacion.setText("");
     }
@@ -263,10 +265,11 @@ public class MainActivity extends AppCompatActivity {
     public void ce(View v){
         Button bce = (Button)findViewById(R.id.bce);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        OPERATION_ARRAY="";
-        operacion.setText(OPERATION_ARRAY);
+        for(int i = 0; i < OPERATION_ARRAY.length; i++) {
+            OPERATION_ARRAY[i] = "";
+        }
+        operacion.setText(OPERATION_ARRAY[i]);
     }
-
 
 
     //AHORA, AL DARLE AL ENTER, PROCESAREMOS LA OPERACION
@@ -274,15 +277,30 @@ public class MainActivity extends AppCompatActivity {
     public void enter(View v){
         Button benter = (Button)findViewById(R.id.benter);
         //PROCESAMOS LA OPERRACION
-
-
-
-
-
+        int cont = 0;
+        float resultado = 0;
+        resultado=Float.parseFloat(OPERATION_ARRAY.get(cont);
+        cont++;
+        while(cont<OPERATION_ARRAY.size()){
+            if(OPERATION_ARRAY.get(cont)=="+"){
+                resultado=resultado+Float.parseFloat(OPERATION_ARRAY.get(cont+1);
+            }
+            if(OPERATION_ARRAY.get(cont)=="-"){
+                resultado=resultado-Float.parseFloat(OPERATION_ARRAY.get(cont+1);
+            }
+            if(OPERATION_ARRAY.get(cont)=="*"){
+                resultado=resultado*Float.parseFloat(OPERATION_ARRAY.get(cont+1);
+            }
+            if(OPERATION_ARRAY.get(cont)=="/"){
+                resultado=resultado/Float.parseFloat(OPERATION_ARRAY.get(cont+1);
+            }
+            cont=cont+2;
+        }
+        String result=Float.toString(resultado);
         //HACEMOS EL INTENT
         Intent i = new Intent(this,SecondActivity.class);
         String message="";
-        i.putExtra(OPERATION_ARRAY,message);
+        i.putExtra(result,message);
         startActivity(i);
     }
 
