@@ -51,7 +51,7 @@ public class SecondActivity extends AppCompatActivity {
     public void returnWithResult(){
         MESSAGE_KEY_2=String.valueOf(resultadoActual);
         Intent intent = new Intent(this, MainActivity.class);
-        String message;
+        String message="";
         intent.putExtra(MESSAGE_KEY_2,message);    //DA UN ERROR XQ DICE QUE LA VARIABLE NO ESTÁ INICIALIZADA (EN TEORIA NO TIENE QUE ESTAR INICIALIZADA)
         startActivity(intent);
     }

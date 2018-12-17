@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Para controlar o escuchar los inputs, creamos los objetos View y los asociamos a los objetos del Layout
-        /*Button b1 = (Button)findViewById(R.id.b1);
+        Button b1 = (Button)findViewById(R.id.b1);
         Button b2 = (Button)findViewById(R.id.b2);
         Button b3 = (Button)findViewById(R.id.b3);
         Button b4 = (Button)findViewById(R.id.b4);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         Button bdiv = (Button)findViewById(R.id.bdiv);
         Button benter = (Button)findViewById(R.id.benter);
         Button bce = (Button)findViewById(R.id.bce);
-        TextView operacion = (TextView)findViewById(R.id.operacion);*/
+        TextView operacion = (TextView)findViewById(R.id.operacion);
     }
 
 
@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="1";
             }
         else {                                                      //Si no, hara la concatenacion
-            String one = "1";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "1";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
             }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="2";
         }
         else {
-            String one = "2";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "2";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
         }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="3";
         }
         else {
-            String one = "3";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "3";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
         }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -100,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="4";
         }
         else {
-            String one = "4";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "4";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
         }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -115,8 +115,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="5";
         }
         else {
-            String one = "5";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "5";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
         }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -130,8 +130,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="6";
         }
         else {
-            String one = "6";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "6";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
         }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -145,8 +145,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="7";
         }
         else {
-            String one = "7";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "7";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
         }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -160,8 +160,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="8";
         }
         else {
-            String one = "8";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "8";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
         }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -175,8 +175,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="9";
         }
         else {
-            String one = "9";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "9";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
         }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -190,8 +190,8 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="0";
         }
         else {
-            String one = "0";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String num = "0";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(num);
         }
         operacion.setText(OPERATION_ARRAY);
     }
@@ -205,10 +205,10 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="+";
         }
         else {
-            String one = "+";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String operador = "+";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(operador);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText("");
     }
 
 
@@ -220,10 +220,10 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="-";
         }
         else {
-            String one = "-";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String operador = "-";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(operador);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText("");
     }
 
 
@@ -235,10 +235,10 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="*";
         }
         else {
-            String one = "*";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String operador = "*";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(operador);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText("");
     }
 
 
@@ -250,10 +250,10 @@ public class MainActivity extends AppCompatActivity {
             OPERATION_ARRAY="/";
         }
         else {
-            String one = "/";
-            OPERATION_ARRAY = OPERATION_ARRAY.concat(one);
+            String operador = "/";
+            OPERATION_ARRAY = OPERATION_ARRAY.concat(operador);
         }
-        operacion.setText(OPERATION_ARRAY);
+        operacion.setText("");
     }
 
 
@@ -263,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
     public void ce(View v){
         Button bce = (Button)findViewById(R.id.bce);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        OPERATION_ARRAY=null;
+        OPERATION_ARRAY="";
         operacion.setText(OPERATION_ARRAY);
     }
 
@@ -271,7 +271,7 @@ public class MainActivity extends AppCompatActivity {
 
     //AHORA, AL DARLE AL ENTER, PROCESAREMOS LA OPERACION
     //Y, HAREMOS EL INTENT PARA PASARLE AL SecondActivity EL RESULTADO
-    public void enter(){
+    public void enter(View v){
         Button benter = (Button)findViewById(R.id.benter);
         //PROCESAMOS LA OPERRACION
 
@@ -281,8 +281,8 @@ public class MainActivity extends AppCompatActivity {
 
         //HACEMOS EL INTENT
         Intent i = new Intent(this,SecondActivity.class);
-        String message;
-        i.putExtra(MESSAGE_KEY,message);
+        String message="";
+        i.putExtra(OPERATION_ARRAY,message);
         startActivity(i);
     }
 
