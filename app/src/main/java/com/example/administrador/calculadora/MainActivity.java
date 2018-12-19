@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     //Variables que declaramos en MainActivity:
     String MESSAGE_KEY = "message";     //lo que pasamos a la otra activity
     String MESSAGE_KEY_2;               //lo que recibimos de la otra activity
-    public String[] OPERATION_ARRAY;             //array de los valores que introducimos a la operacion
+    public String[] OPERATION_ARRAY=new String[1000];             //array de los valores que introducimos a la operacion
     int i=0;
 
     @Override
@@ -140,13 +140,14 @@ public class MainActivity extends AppCompatActivity {
     public void seven(View v){
         Button b7 = (Button)findViewById(R.id.b7);
         TextView operacion = (TextView)findViewById(R.id.operacion);
-        if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
+       if(OPERATION_ARRAY[i] == null || OPERATION_ARRAY[i]== "")
         {
             OPERATION_ARRAY[i]="7";
         }
         else {
             String num = "7";
             OPERATION_ARRAY[i] = OPERATION_ARRAY[i].concat(num);
+        OPERATION_ARRAY[i] = num;
         }
         operacion.setText(OPERATION_ARRAY[i]);
     }
@@ -279,31 +280,28 @@ public class MainActivity extends AppCompatActivity {
         //PROCESAMOS LA OPERRACION
         int cont = 0;
         float resultado = 0;
-        resultado=Float.parseFloat(OPERATION_ARRAY.get(cont));
+        resultado=Float.parseFloat(OPERATION_ARRAY[cont+1]);
         cont++;
-        while(cont<OPERATION_ARRAY.size()){
-            if(OPERATION_ARRAY.get(cont)=="+"){
-                resultado=resultado+Float.parseFloat(OPERATION_ARRAY.get(cont+1));
+        while(cont<OPERATION_ARRAY.length){
+            if(OPERATION_ARRAY[cont]=="+"){
+                resultado=resultado+Float.parseFloat(OPERATION_ARRAY[cont+1]);
             }
-            if(OPERATION_ARRAY.get(cont)=="-"){
-                resultado=resultado-Float.parseFloat(OPERATION_ARRAY.get(cont+1));
+            if(OPERATION_ARRAY[cont]=="-"){
+                resultado=resultado-Float.parseFloat(OPERATION_ARRAY[cont+1]);
             }
-            if(OPERATION_ARRAY.get(cont)=="*"){
-                resultado=resultado*Float.parseFloat(OPERATION_ARRAY.get(cont+1));
+            if(OPERATION_ARRAY[cont]=="*"){
+                resultado=resultado*Float.parseFloat(OPERATION_ARRAY[cont+1]);
             }
-            if(OPERATION_ARRAY.get(cont)=="/"){
-                resultado=resultado/Float.parseFloat(OPERATION_ARRAY.get(cont+1));
+            if(OPERATION_ARRAY[cont]=="/"){
+                resultado=resultado/Float.parseFloat(OPERATION_ARRAY[cont+1]);
             }
             cont=cont+2;
         }
-        String result=Float.toString(resultado);
+        //String result=Float.toString(resultado);
         //HACEMOS EL INTENT
         Intent i = new Intent(this,SecondActivity.class);
-        String message="";
-        i.putExtra(result,message);
+        String message=Float.toString(resultado);
+        i.putExtra(MESSAGE_KEY,message);
         startActivity(i);
     }
-
-//
-
 }

@@ -15,7 +15,7 @@ public class SecondActivity extends AppCompatActivity {
     //Declaramos una variable float para ir actualizando el valor actual del resultado
     public float resultadoActual;
     //Declaramos otra variable para volver a pasarle datos a la MainActivity
-    String MESSAGE_KEY_2;
+    String MESSAGE_KEY_2="message2";;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +30,14 @@ public class SecondActivity extends AppCompatActivity {
 
         //Recogemos lo que nos llega del Intent
         Intent intent = getIntent();
-        String result = intent.getStringExtra(MESSAGE_KEY);
-        //Mostramos el resultado en el TextBox "resultado"
-        resultado.setText(result);
-        //Tenemos result en el TextBox como un string, para operar con el, habrá que pasarlo a float
-        //y actualizamos el valor de la variable float resultadoActual
-        resultadoActual=Float.parseFloat(result);
+        if(intent.hasExtra(MESSAGE_KEY)){
+            String result = intent.getStringExtra(MESSAGE_KEY);
+            //Mostramos el resultado en el TextBox "resultado"
+            resultado.setText(result);
+            //Tenemos result en el TextBox como un string, para operar con el, habrá que pasarlo a float
+            //y actualizamos el valor de la variable float resultadoActual
+            resultadoActual=Float.parseFloat(result);
+        }
     }
 
 
@@ -49,10 +51,9 @@ public class SecondActivity extends AppCompatActivity {
 
     //Boton para volver a la MainActivity manteniendo el resultado
     public void returnWithResult(){
-        MESSAGE_KEY_2=String.valueOf(resultadoActual);
         Intent intent = new Intent(this, MainActivity.class);
-        String message="";
-        intent.putExtra(MESSAGE_KEY_2,message);    //DA UN ERROR XQ DICE QUE LA VARIABLE NO ESTÁ INICIALIZADA (EN TEORIA NO TIENE QUE ESTAR INICIALIZADA)
+        String message=String.valueOf(resultadoActual);
+        intent.putExtra(MESSAGE_KEY_2,message);
         startActivity(intent);
     }
 
